@@ -5,21 +5,22 @@ This package is offered on a **limited basis** while real-world engagements
 and feedback are being incorporated. Availability and scope may be adjusted
 without notice.
 
-This repository provides a **practical design package** for introducing
+This site provides a **practical design package** for introducing
 AI / LLM-based control systems **safely and responsibly**.
 
-We focus on **risk, safety boundaries, and recovery**, not performance optimization.
+We focus on **risk, safety boundaries, and recovery**,  
+**not** performance optimization.
 
 ---
 
 ## What this package is
 
 - A **design and review framework** for AI-assisted control systems
-- A way to define **where AI can be used**
-- A way to clearly define **where AI must be stopped**
-- A way to ensure systems **recover safely when things go wrong**
+- A clear definition of **where AI can be used**
+- A clear definition of **where AI must be stopped**
+- A structured way to ensure systems **recover safely when things go wrong**
 
-This package is intended for **industrial control, embedded systems,
+This package targets **industrial control, embedded systems,
 and long-term operation environments**.
 
 ---
@@ -27,8 +28,8 @@ and long-term operation environments**.
 ## What this package is NOT
 
 - We do **NOT** optimize control performance
-- We do **NOT** replace existing PID / classical controllers
-- We do **NOT** put LLMs inside real-time control loops
+- We do **NOT** replace existing PID or classical controllers
+- We do **NOT** place LLMs inside real-time control loops
 - We do **NOT** provide safety certification
 
 This is a **design-level safety and reliability package**.
@@ -38,45 +39,41 @@ This is a **design-level safety and reliability package**.
 ## Packages
 
 ### 1. AI Control Risk Review
+Architectural **Go / Conditional Go / No-Go** judgment  
+for AI / LLM-based control concepts.
 
-**Purpose:**  
-Evaluate whether an AI / LLM-based control concept is structurally safe.
+- AI placement outside real-time loops
+- Stop conditions and fallback paths
+- Responsibility and failure handling clarity
 
-**Typical checks:**
-- Is AI used outside real-time loops?
-- Is there a clear stop / fallback mechanism?
-- Is responsibility and failure handling defined?
-
-🔗 **Open:** https://samizo-aitl.github.io/ai-control-safety-package/packages/risk-review/
+🔗 **Open:**  
+https://samizo-aitl.github.io/ai-control-safety-package/packages/risk-review/
 
 ---
 
 ### 2. Safety Envelope Design
+Explicit definition and enforcement of  
+**operational boundaries AI must not violate**.
 
-**Purpose:**  
-Define and enforce operational boundaries that AI must not violate.
-
-**Key concepts:**
-- Envelope (allowed operational region)
+- Allowed operational regions (envelopes)
 - Pre-violation detection
-- FSM-based supervision
+- FSM-based supervisory enforcement
 
-🔗 **Open:** https://samizo-aitl.github.io/ai-control-safety-package/packages/safety-envelope/
+🔗 **Open:**  
+https://samizo-aitl.github.io/ai-control-safety-package/packages/safety-envelope/
 
 ---
 
 ### 3. Recovery Control Design
+Deterministic recovery design after  
+disturbances, degradation, or abnormal behavior.
 
-**Purpose:**  
-Ensure the system can **return to a safe and stable state**
-after disturbances, degradation, or abnormal behavior.
-
-**Key concepts:**
 - Recovery modes
 - Safe fallback paths
-- Controlled re-identification (when allowed)
+- Controlled re-entry and re-identification
 
-🔗 **Open:** https://samizo-aitl.github.io/ai-control-safety-package/packages/recovery-control/
+🔗 **Open:**  
+https://samizo-aitl.github.io/ai-control-safety-package/packages/recovery-control/
 
 ---
 
@@ -92,22 +89,6 @@ Exact scope, schedule, and fees are discussed individually.
 
 ---
 
-## Technical Background (Reference)
-
-This package is based on a three-layer control architecture  
-(**PID × FSM × AI assistance**) developed in the Samizo-AITL project.
-
-Background concepts and design philosophy:
-- AITL Controller (A-Type / B-Type)
-- Reliability-oriented supervisory control
-- Envelope control
-- Design recovery control
-- True robust control (operational robustness)
-
-These materials are provided **as references**, not requirements.
-
----
-
 ## Where to start
 
 If you are unsure where to begin,  
@@ -117,21 +98,16 @@ If you are unsure where to begin,
 
 ## Who should use this
 
-- Control engineers facing AI / LLM integration pressure
+- Control engineers under pressure to introduce AI / LLM
 - Technical leads responsible for safety and reliability
-- Teams needing a **clear “go / no-go” decision framework**
+- Teams requiring a defensible **Go / No-Go** decision
 - Organizations that must explain **why AI is limited or disabled**
 
 ---
 
 ## Contact
 
-If you need:
-- A design review
-- A safety boundary definition
-- A recovery strategy assessment
-
-Please contact:
+For design reviews or inquiries:
 
 📧 shinichi.samizo2@gmail.com  
 🌐 https://samizo-aitl.github.io/
