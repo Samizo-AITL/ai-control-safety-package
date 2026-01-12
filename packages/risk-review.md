@@ -1,44 +1,101 @@
 # AI Control Risk Review
 
 ## Overview
-A design-level review to determine whether an AI / LLM-based control concept
-is safe to deploy, conditionally acceptable, or should be stopped.
 
-This review focuses on **architecture and responsibility**, not tuning or optimization.
+The **AI Control Risk Review** is a design-level assessment to determine whether
+an AI / LLM-based control concept is **safe to deploy**, **conditionally acceptable**,
+or **should be stopped**.
 
----
-
-## What we review
-
-- Location of AI / LLM (real-time loop or not)
-- Existence of stop, fallback, and manual override paths
-- Supervisory logic (FSM or equivalent)
-- Failure modes and responsibility clarity
-- Long-term operation and degradation assumptions
+This review focuses on **architecture, responsibility, and failure handling**.
+It does **not** evaluate tuning quality, model accuracy, or performance optimization.
 
 ---
 
-## What you get
+## Scope of Review
 
-- **Go / Conditional Go / No-Go** judgment
-- Key risk points clearly identified
-- Recommended next actions (if any)
-- 1–2 page written summary
+The review covers the following structural aspects:
+
+### 1. AI / LLM Placement
+- Is AI used **outside** real-time control loops?
+- Are timing, determinism, and failure modes clearly separated from control execution?
+
+### 2. Stop and Fallback Mechanisms
+- Is there an explicit **stop condition** for AI involvement?
+- Is a **manual override** or hard fallback defined?
+- Can the system operate safely with AI completely disabled?
+
+### 3. Supervisory Logic
+- Is there a supervisory layer (FSM or equivalent)?
+- Are mode transitions deterministic and explainable?
+- Is responsibility for decisions clearly assigned?
+
+### 4. Failure and Responsibility Definition
+- Are failure scenarios explicitly assumed and documented?
+- Is it clear **who decides** and **who is responsible** when AI behavior is rejected?
+- Is post-failure operation defined?
+
+### 5. Long-Term Operation Assumptions
+- Are degradation, drift, or unexpected operating conditions considered?
+- Is continuous AI adaptation bounded or restricted?
 
 ---
 
-## Typical use cases
+## What This Review Does NOT Cover
 
-- Before introducing AI / LLM-based control
-- When management requests “AI adoption”
-- When safety responsibility is unclear
+- Control performance tuning
+- Controller parameter optimization
+- Model training or dataset evaluation
+- Safety certification or compliance approval
+- Implementation or code-level debugging
+
+This is a **design judgment**, not an implementation service.
 
 ---
 
-## Engagement
+## Deliverables
 
-- Duration: 1–2 hours discussion + document review
-- Output: Written summary (PDF or Markdown)
+You will receive:
+
+- A **Go / Conditional Go / No-Go** judgment
+- Clear identification of structural risk points
+- Recommended next steps (if applicable)
+- A **1–2 page written summary** (PDF or Markdown)
+
+---
+
+## Typical Use Cases
+
+- Before introducing AI / LLM-based control into an existing system
+- When management requests AI adoption without clear safety criteria
+- When technical responsibility and stop conditions are unclear
+- As an external, third-party design sanity check
+
+---
+
+## Engagement Details
+
+- Format: Design discussion + document review
+- Duration: 1–2 hours
+- Output: Written review summary
 - Fee guideline: **JPY 50,000 – 100,000**
 
-This review is architecture-focused and does not include implementation.
+Exact scope and schedule are discussed individually.
+
+---
+
+## Important Note
+
+This review may conclude with a **No-Go** judgment.
+
+A No-Go result does **not** indicate failure.
+It indicates that the current design **cannot be responsibly deployed**
+without structural changes.
+
+---
+
+## Contact
+
+For review requests or inquiries:
+
+📧 shinichi.samizo2@gmail.com  
+🌐 https://samizo-aitl.github.io/ai-control-safety-package/
