@@ -114,7 +114,7 @@ If you need:
 
 Please contact:
 
-📧 shinichi.samizo@gmail.com  
+📧 shinichi.samizo2@gmail.com  
 🌐 https://samizo-aitl.github.io/
 
 ---
