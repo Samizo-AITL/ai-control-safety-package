@@ -10,7 +10,7 @@ This package is offered on a **limited basis** while real-world engagements
 and feedback are being incorporated. Availability and scope may be adjusted
 without notice.
 
-This site provides a **practical design package** for introducing
+This site provides a **practical design package** for introducing  
 AI / LLM-based control systems **safely and responsibly**.
 
 We focus on **risk, safety boundaries, and recovery**,  
@@ -52,7 +52,7 @@ for AI / LLM-based control concepts.
 - Responsibility and failure handling clarity
 
 🔗 **Open:**  
-https://samizo-aitl.github.io/ai-control-safety-package/packages/risk-review/
+[risk-review.md](https://samizo-aitl.github.io/ai-control-safety-package/packages/risk-review.html)
 
 ---
 
@@ -65,7 +65,7 @@ Explicit definition and enforcement of
 - FSM-based supervisory enforcement
 
 🔗 **Open:**  
-https://samizo-aitl.github.io/ai-control-safety-package/packages/safety-envelope/
+[safety-envelope.md](https://samizo-aitl.github.io/ai-control-safety-package/packages/safety-envelope.html)
 
 ---
 
@@ -78,7 +78,7 @@ disturbances, degradation, or abnormal behavior.
 - Controlled re-entry and re-identification
 
 🔗 **Open:**  
-https://samizo-aitl.github.io/ai-control-safety-package/packages/recovery-control/
+[recovery-control.md](https://samizo-aitl.github.io/ai-control-safety-package/packages/recovery-control.html)
 
 ---
 
@@ -114,12 +114,12 @@ If you are unsure where to begin,
 
 For design reviews or inquiries:
 
-📧 shinichi.samizo2@gmail.com  
-🌐 https://samizo-aitl.github.io/
+📧 [shinichi.samizo2@gmail.com](mailto:shinichi.samizo2@gmail.com)  
+🌐 [samizo-aitl.github.io](https://samizo-aitl.github.io/)
 
 ---
 
 ## License
 
-This repository is provided for **design discussion and consulting purposes**.
+This repository is provided for **design discussion and consulting purposes**.  
 Commercial use, redistribution, or implementation requires prior agreement.
