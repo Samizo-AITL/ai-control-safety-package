@@ -119,6 +119,10 @@ If you are unsure where to begin,
 
 ---
 
+> If unsure where to start, **AI Control Risk Review** is the recommended entry point.
+
+---
+
 ## Contact
 
 If you need:
