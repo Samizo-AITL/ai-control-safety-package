@@ -1,3 +1,8 @@
+---
+title: "ai-control-safety-package"
+description: "Recovery Control Design"
+---
+
 # Recovery Control Design
 
 ## Overview
