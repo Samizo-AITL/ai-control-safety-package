@@ -1,5 +1,10 @@
 # AI Control Safety Package
 
+🚧 **Currently in early-stage availability (limited engagement).**  
+This package is offered on a **limited basis** while real-world engagements
+and feedback are being incorporated. Availability and scope may be adjusted
+without notice.
+
 This repository provides a **practical design package** for introducing
 AI / LLM-based control systems **safely and responsibly**.
 
@@ -75,16 +80,6 @@ after disturbances, degradation, or abnormal behavior.
 
 ---
 
-## Status
-
-🚧 **Currently in early-stage availability (limited engagement).**
-
-This package is being offered on a **limited basis** while real-world
-engagements and feedback are being incorporated.
-Availability and scope may be adjusted without notice.
-
----
-
 ## Engagement & Fees (Guideline)
 
 This package is provided as a **design review and consulting service**.
@@ -99,8 +94,8 @@ Exact scope, schedule, and fees are discussed individually.
 
 ## Technical Background (Reference)
 
-This package is based on a three-layer control architecture
-(PID × FSM × AI assistance) developed in the Samizo-AITL project.
+This package is based on a three-layer control architecture  
+(**PID × FSM × AI assistance**) developed in the Samizo-AITL project.
 
 Background concepts and design philosophy:
 - AITL Controller (A-Type / B-Type)
@@ -126,10 +121,6 @@ If you are unsure where to begin,
 - Technical leads responsible for safety and reliability
 - Teams needing a **clear “go / no-go” decision framework**
 - Organizations that must explain **why AI is limited or disabled**
-
----
-
-> If unsure where to start, **AI Control Risk Review** is the recommended entry point.
 
 ---
 
