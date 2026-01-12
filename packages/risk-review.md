@@ -1,3 +1,8 @@
+---
+title: "ai-control-safety-package"
+description: "AI Control Risk Review"
+---
+
 # AI Control Risk Review
 
 ## Overview
