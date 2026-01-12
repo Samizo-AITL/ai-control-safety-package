@@ -80,6 +80,16 @@ after disturbances, degradation, or abnormal behavior.
 
 ---
 
+## Status
+
+🚧 **Currently in early-stage availability (limited engagement).**
+
+This package is being offered on a **limited basis** while real-world
+engagements and feedback are being incorporated.
+Availability and scope may be adjusted without notice.
+
+---
+
 ## Engagement & Fees (Guideline)
 
 This package is provided as a **design review and consulting service**.
