@@ -75,6 +75,18 @@ after disturbances, degradation, or abnormal behavior.
 
 ---
 
+## Engagement & Fees (Guideline)
+
+This package is provided as a **design review and consulting service**.
+
+- **AI Control Risk Review**: JPY 50,000 – 100,000  
+- **Safety Envelope Design**: JPY 100,000 – 300,000  
+- **Recovery Control Design**: JPY 150,000 – 400,000  
+
+Exact scope, schedule, and fees are discussed individually.
+
+---
+
 ## Technical Background (Reference)
 
 This package is based on a three-layer control architecture
