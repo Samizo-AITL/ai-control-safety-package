@@ -103,6 +103,13 @@ These materials are provided **as references**, not requirements.
 
 ---
 
+## Where to start
+
+If you are unsure where to begin,  
+**AI Control Risk Review** is recommended as the first step.
+
+---
+
 ## Who should use this
 
 - Control engineers facing AI / LLM integration pressure
