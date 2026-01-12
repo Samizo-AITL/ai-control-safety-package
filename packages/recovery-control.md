@@ -129,5 +129,5 @@ AI involvement should be **restricted or removed**.
 
 For Recovery Control Design inquiries:
 
-📧 shinichi.samizo2@gmail.com  
-🌐 https://samizo-aitl.github.io/ai-control-safety-package/
+📧 [shinichi.samizo2@gmail.com](mailto:shinichi.samizo2@gmail.com)  
+🌐 [samizo-aitl.github.io](https://samizo-aitl.github.io/)
