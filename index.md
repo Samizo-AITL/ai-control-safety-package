@@ -52,7 +52,7 @@ Evaluate whether an AI / LLM-based control concept is structurally safe.
 - Is there a clear stop / fallback mechanism?
 - Is responsibility and failure handling defined?
 
-📄 `packages/risk-review.md`
+🔗 **Open:** https://samizo-aitl.github.io/ai-control-safety-package/packages/risk-review/
 
 ---
 
@@ -66,7 +66,7 @@ Define and enforce operational boundaries that AI must not violate.
 - Pre-violation detection
 - FSM-based supervision
 
-📄 `packages/safety-envelope.md`
+🔗 **Open:** https://samizo-aitl.github.io/ai-control-safety-package/packages/safety-envelope/
 
 ---
 
@@ -81,7 +81,7 @@ after disturbances, degradation, or abnormal behavior.
 - Safe fallback paths
 - Controlled re-identification (when allowed)
 
-📄 `packages/recovery-control.md`
+🔗 **Open:** https://samizo-aitl.github.io/ai-control-safety-package/packages/recovery-control/
 
 ---
 
