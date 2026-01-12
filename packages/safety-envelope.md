@@ -1,3 +1,8 @@
+---
+title: "ai-control-safety-package"
+description: "Safety Envelope Design"
+---
+
 # Safety Envelope Design
 
 ## Overview
