@@ -14,7 +14,7 @@ This site provides a **practical design package** for introducing
 AI / LLM-based control systems **safely and responsibly**.
 
 We focus on **risk, safety boundaries, and recovery**,  
-**not** performance optimization.
+**not** performance optimization. 
 
 ---
 
