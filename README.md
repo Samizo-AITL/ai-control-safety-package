@@ -1,9 +1,9 @@
 # AI Control Safety Package
 
-🚧 **Currently in early-stage availability (limited engagement).**  
-This package is offered on a **limited basis** while real-world engagements
-and feedback are being incorporated. Availability and scope may be adjusted
-without notice.
+🚧 **Currently under development.**  
+This package is **not yet offered as a deployable or commercial solution**.
+It is being prepared as a design and governance framework, and real-world
+engagements have not yet been conducted.
 
 This site provides a **practical design package** for introducing  
 AI / LLM-based control systems **safely and responsibly**.
