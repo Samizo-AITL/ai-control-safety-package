@@ -18,6 +18,14 @@ We focus on **risk, safety boundaries, and recovery**,
 
 ---
 
+## 🔗 Links
+
+| Language | GitHub Pages 🌐 | GitHub 💻 |
+|----------|----------------|-----------|
+| 🇺🇸 English | [![GitHub Pages EN](https://img.shields.io/badge/GitHub%20Pages-English-brightgreen?logo=github)](https://samizo-aitl.github.io/ai-control-safety-package/) | [![GitHub Repo EN](https://img.shields.io/badge/GitHub-English-blue?logo=github)](https://github.com/Samizo-AITL/ai-control-safety-package/tree/main) |
+
+---
+
 ## What this package is
 
 - A **design and review framework** for AI-assisted control systems
