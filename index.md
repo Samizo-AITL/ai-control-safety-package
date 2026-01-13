@@ -5,26 +5,6 @@ description: "AI Control Safety Package"
 
 # AI Control Safety Package
 
-Currently in early-stage availability (limited engagement).
-
-<p class="top-concept">
-A practical design package for introducing <strong>AI / LLM-based control systems</strong>
-safely and responsibly.
-</p>
-
-<ul class="principles">
-  <li>Risk-first design</li>
-  <li>Explicit safety boundaries</li>
-  <li>Recovery and fallback over optimization</li>
-</ul>
-
-<div class="entry-links">
-  <a href="...">Documentation</a>
-  <a href="...">GitHub</a>
-</div>
-
-# AI Control Safety Package
-
 🚧 **Currently in early-stage availability (limited engagement).**  
 This package is offered on a **limited basis** while real-world engagements
 and feedback are being incorporated. Availability and scope may be adjusted
