@@ -123,3 +123,19 @@ For design reviews or inquiries:
 
 This repository is provided for **design discussion and consulting purposes**.  
 Commercial use, redistribution, or implementation requires prior agreement.
+
+---
+
+## Discussions
+
+For questions, design clarification, or architectural discussion,  
+please use GitHub Discussions:
+
+💬 **[GitHub Discussions](https://github.com/Samizo-AITL/ai-control-safety-package/discussions)**
+
+This is the primary place for:
+- Design-level questions
+- Go / No-Go judgment discussion
+- Safety boundary interpretation
+
+
