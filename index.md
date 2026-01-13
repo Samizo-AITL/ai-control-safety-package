@@ -25,7 +25,7 @@ We focus on **risk, safety boundaries, and recovery**,
 - A clear definition of **where AI must be stopped**
 - A structured way to ensure systems **recover safely when things go wrong**
 
-This package targets **industrial control, embedded systems,
+This package targets **industrial control, embedded systems,  
 and long-term operation environments**.
 
 ---
@@ -84,13 +84,31 @@ disturbances, degradation, or abnormal behavior.
 
 ## Engagement & Fees (Guideline)
 
-This package is provided as a **design review and consulting service**.
+This package is provided as a **limited-scope design review and consulting service**  
+focused on **architecture, responsibility, and safety logic**.
 
-- **AI Control Risk Review**: JPY 50,000 – 100,000  
-- **Safety Envelope Design**: JPY 100,000 – 300,000  
-- **Recovery Control Design**: JPY 150,000 – 400,000  
+The following fees reflect:
+- Design-level assessment only (no implementation or coding)
+- No certification, operational guarantee, or liability assumption
+- Time-bounded, clearly scoped engagement
+- Explicit Go / Conditional Go / No-Go judgment where applicable
 
-Exact scope, schedule, and fees are discussed individually.
+### Service Menu
+
+- **AI Control Risk Review**  
+  from **JPY 50,000 – 100,000**  
+  *(Architecture review, responsibility definition, Go / No-Go judgment)*
+
+- **Safety Envelope Design**  
+  from **JPY 100,000 – 300,000**  
+  *(Operational boundary definition, supervisory logic, enforcement actions)*
+
+- **Recovery Control Design**  
+  from **JPY 150,000 – 400,000**  
+  *(Recovery triggers, fallback structure, deterministic re-entry design)*
+
+Fees depend on system complexity, documentation availability,  
+and required depth of review.
 
 ---
 
@@ -142,5 +160,3 @@ This is the primary place for:
 - Design-level questions
 - Go / No-Go judgment discussion
 - Safety boundary interpretation
-
-
