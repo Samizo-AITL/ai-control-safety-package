@@ -72,6 +72,107 @@ Re-entry is **explicit**, never automatic.
 
 ---
 
+## Example: Recovery Control for AI-Assisted Process Control
+
+### System Context (Example)
+
+- Target system: Continuous industrial process
+- Normal control: PID + FSM supervision
+- AI role: Advisory optimization and trend analysis (non-real-time)
+- Safety envelope: Defined and enforced externally
+
+AI has **no authority** during recovery.
+
+---
+
+### Recovery Triggers (Example)
+
+| Trigger | Description |
+|-------|-------------|
+| Envelope violation | Any variable exceeds safety boundary |
+| Persistent oscillation | Stability margin violated for > T seconds |
+| AI confidence loss | AI confidence below threshold |
+| Sensor inconsistency | Redundant sensor mismatch |
+| Manual request | Operator-initiated recovery |
+
+Any single trigger is sufficient to enter Recovery Mode.
+
+---
+
+### Recovery Mode Definition
+
+In **Recovery Mode**:
+
+- AI output is **completely ignored**
+- Control authority is **restricted**
+- Only baseline controllers are active
+- Mode transitions are **locked and logged**
+
+Recovery Mode is **not adaptive**.
+
+---
+
+### Baseline Control (Example)
+
+| Element | Definition |
+|-------|------------|
+| Controller | Fixed-gain PID |
+| Setpoints | Conservative, pre-approved values |
+| Limits | Hard clamping enabled |
+| Performance | Reduced but predictable |
+
+Baseline behavior must be **analyzed and validated offline**.
+
+---
+
+### Recovery State Flow (FSM Example)
+
+```mermaid
+stateDiagram-v2
+    Normal --> Recovery : Trigger detected
+    Recovery --> Stabilizing : Baseline active
+    Stabilizing --> Hold : Stability confirmed
+    Hold --> Normal : Approved re-entry
+```
+
+- FSM owns all recovery transitions  
+- No automatic return to Normal  
+- Human or supervisory approval required  
+
+---
+
+### Controlled Re-Entry Criteria (Example)
+
+All of the following must be satisfied:
+
+- System variables remain within envelope for **T_hold**
+- No recovery triggers active
+- Baseline control stable and bounded
+- Operator or supervisor approval granted
+
+Only then may AI functions be **optionally re-enabled**.
+
+---
+
+### Failure Scenario Handling
+
+**Assumed scenario:**  
+AI-assisted control causes gradual instability due to model drift.
+
+**System response:**
+1. Degradation detected by envelope margin logic  
+2. FSM transitions to *Recovery Mode*  
+3. AI is disabled immediately  
+4. Baseline PID takes control  
+5. System stabilizes at conservative setpoints  
+6. Event is logged and reviewed  
+7. Re-entry considered only after approval  
+
+**Outcome:**  
+Safe, explainable recovery with clear responsibility.
+
+---
+
 ## What This Design Does NOT Do
 
 - It does **not** attempt self-healing through unrestricted adaptation
