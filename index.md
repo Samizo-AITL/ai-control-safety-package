@@ -121,8 +121,13 @@ For design reviews or inquiries:
 
 ## License
 
-This repository is provided for **design discussion and consulting purposes**.  
-Commercial use, redistribution, or implementation requires prior agreement.
+This repository is provided for **reference and design discussion purposes only**.
+
+- Reading, discussion, and internal evaluation are permitted.
+- Commercial use, redistribution, or implementation in products or services
+  requires prior written agreement.
+
+This is **not** an open-source software license.
 
 ---
 
