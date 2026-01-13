@@ -45,6 +45,76 @@ The review covers the following structural aspects:
 
 ---
 
+## Example: AI-Assisted Control With Safety Review
+
+### System Context (Example)
+
+- Plant: Industrial thermal process
+- Base control: PID (real-time loop)
+- Supervisory control: FSM
+- AI role: Trend analysis and recovery proposal (offline / non-real-time)
+
+### Architectural Placement
+
+```
+[ Sensors ]
+ ↓
+[ PID Control Loop ] ← real-time, deterministic
+ ↓
+[ Actuators ]
+
+[ FSM Supervisor ]
+ ↑
+[ AI / LLM Analysis ]
+```
+
+- AI **does not** issue direct actuator commands  
+- AI outputs **recommendations only**
+- FSM decides whether to accept or reject AI output
+
+### Stop & Fallback Definition
+
+| Condition | Action |
+|---------|--------|
+| AI response delayed | Ignore AI, continue PID |
+| AI confidence < threshold | Ignore AI |
+| AI suggestion violates limits | Force Safe Mode |
+| Manual stop | AI fully disabled |
+
+> System must remain operational and safe with AI completely disabled.
+
+### Safety Envelope (Example)
+
+| Variable | Safe Range | Enforcement |
+|--------|------------|-------------|
+| Temperature | 20 – 80 °C | PID clamp / shutdown |
+| Pressure | 0.1 – 2.0 MPa | FSM slow-down |
+| Control Output | ±100 % | Hard limit |
+| AI Confidence | ≥ 0.7 | Advisory allowed |
+
+### Responsibility Assignment
+
+- **PID**: stability and immediate safety
+- **FSM**: mode selection and authority
+- **AI**: advisory analysis only
+- **Human operator**: final override authority
+
+### Failure Scenario Handling
+
+**Assumed failure:**  
+AI proposes an aggressive gain change based on incomplete data.
+
+**System response:**  
+1. FSM detects violation of gain-change policy  
+2. AI recommendation is rejected  
+3. System remains in current safe mode  
+4. Event is logged for post-analysis  
+
+**Outcome:**  
+No unsafe behavior, no AI dependency.
+
+---
+
 ## What This Review Does NOT Cover
 
 - Control performance tuning
@@ -92,7 +162,7 @@ Exact scope and schedule are discussed individually.
 
 This review may conclude with a **No-Go** judgment.
 
-A No-Go result does **not** indicate failure.
+A No-Go result does **not** indicate failure.  
 It indicates that the current design **cannot be responsibly deployed**
 without structural changes.
 
