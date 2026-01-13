@@ -1,9 +1,19 @@
 <!-- Mermaid -->
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    if (window.mermaid) {
-      mermaid.initialize({ startOnLoad: true });
-    }
+document.addEventListener("DOMContentLoaded", function () {
+  if (!window.mermaid) return;
+
+  mermaid.initialize({ startOnLoad: false });
+
+  document.querySelectorAll('pre > code.language-mermaid').forEach(function (code) {
+    var pre = code.parentElement;
+    var div = document.createElement('div');
+    div.className = 'mermaid';
+    div.textContent = code.textContent;
+    pre.replaceWith(div);
   });
+
+  mermaid.run();
+});
 </script>
