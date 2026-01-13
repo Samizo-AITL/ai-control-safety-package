@@ -31,8 +31,8 @@ Typical envelope dimensions include:
 - Operational modes and transitions
 - Environmental or aging assumptions
 
-The envelope defines **where control is allowed**,  
-everything outside the envelope is **explicitly disallowed**.
+The envelope defines **where control is allowed**.  
+Everything outside the envelope is **explicitly disallowed**.
 
 ---
 
@@ -59,6 +59,98 @@ The Safety Envelope Design covers:
 - Limiting or clamping control authority
 - Mode downgrade or fallback activation
 - Complete AI disengagement when required
+
+---
+
+## Example: Safety Envelope for AI-Assisted Thermal Control
+
+### System Context (Example)
+
+- Target system: Industrial thermal process
+- Base control: PID (real-time)
+- Supervisory control: FSM
+- AI role: Trend prediction and recovery proposal (non-real-time)
+
+AI does **not** directly control actuators.
+
+---
+
+### Envelope Definition (Example)
+
+| Variable | Normal Region | Degraded Region | Disallowed |
+|--------|---------------|-----------------|------------|
+| Temperature | 30 – 70 °C | 25 – 80 °C | <25, >80 |
+| Pressure | 0.2 – 1.5 MPa | 0.1 – 2.0 MPa | <0.1, >2.0 |
+| Control Output | ±70 % | ±90 % | >±90 % |
+| AI Confidence | ≥ 0.7 | 0.5 – 0.7 | <0.5 |
+
+- **Normal**: full operation allowed  
+- **Degraded**: restricted authority  
+- **Disallowed**: immediate enforcement action  
+
+---
+
+### Pre-Violation Detection
+
+Envelope approach is detected using:
+
+- Margin monitoring (distance to boundary)
+- Rate-of-change monitoring (trend)
+- Short-horizon deterministic prediction
+
+**Example rule:**
+
+If temperature is projected to exceed **80 °C within 10 seconds**  
+→ trigger *pre-violation* state.
+
+---
+
+### Supervisory Enforcement (FSM)
+
+```mermaid
+stateDiagram-v2
+    Normal --> Degraded : Boundary approaching
+    Degraded --> Normal : Margin restored
+    Degraded --> Emergency : Boundary violated
+    Emergency --> SafeStop
+```
+
+- FSM owns **authority decisions**
+- AI output is **advisory only**
+- State transitions are deterministic and logged
+
+---
+
+### Enforcement Actions (Example)
+
+| Envelope Status | Action |
+|-----------------|--------|
+| Normal | AI advisory allowed |
+| Degraded | Clamp control output, restrict AI |
+| Emergency | Disable AI, force safe mode |
+| SafeStop | Manual intervention required |
+
+**Key rule:**  
+Safety enforcement does **not** depend on AI judgment.
+
+---
+
+### Failure Scenario Handling
+
+**Assumed failure:**  
+AI proposes an aggressive recovery action based on incomplete data.
+
+**System response:**
+1. Envelope logic detects boundary approach  
+2. FSM transitions to *Degraded* mode  
+3. Control authority is clamped  
+4. AI recommendation is ignored  
+5. System stabilizes within safe limits  
+
+**Outcome:**  
+No envelope violation.  
+No AI dependency.  
+Fully explainable behavior.
 
 ---
 
@@ -120,4 +212,3 @@ For Safety Envelope Design inquiries:
 
 📧 [shinichi.samizo2@gmail.com](mailto:shinichi.samizo2@gmail.com)  
 🌐 [samizo-aitl.github.io](https://samizo-aitl.github.io/)
-
