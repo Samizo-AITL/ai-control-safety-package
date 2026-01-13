@@ -3,7 +3,7 @@ title: "ai-control-safety-package"
 description: "AI Control Safety Package"
 ---
 
-# AI Control Safety Package 
+# AI Control Safety Package  
 
 🚧 **Currently under development.**  
 This package is **not yet offered as a deployable or commercial solution**.
