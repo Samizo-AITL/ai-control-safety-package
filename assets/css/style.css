@@ -37,8 +37,8 @@ p {
   margin: 0.6em 0;
 }
 
-/* ===== Intro Callout ===== */
-p:first-of-type {
+/* ===== Intro Callout : ONLY first paragraph after H1 ===== */
+h1 + p {
   background: #f8fafc;
   border-left: 4px solid #2563eb;
   padding: 12px 16px;
@@ -51,8 +51,17 @@ ul {
   margin: 0.6em 0 0.8em 1.2em;
   padding-left: 0.4em;
 }
+
 li {
   margin: 0.3em 0;
+}
+
+/* Reset paragraph styling inside lists */
+li p {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0.2em 0;
 }
 
 /* ===== Horizontal Rule ===== */
@@ -69,10 +78,12 @@ table {
   margin: 1em 0;
   font-size: 0.95em;
 }
+
 th, td {
   border: 1px solid #d1d5db;
   padding: 6px 10px;
 }
+
 th {
   background: #f3f4f6;
   font-weight: 600;
@@ -87,6 +98,7 @@ pre {
   overflow-x: auto;
   margin: 1.2em 0;
 }
+
 code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.9em;
@@ -103,6 +115,7 @@ a {
   color: #2563eb;
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }
