@@ -34,6 +34,39 @@ not as afterthoughts.
 
 ---
 
+## Conceptual Structure (Mermaid Overview)
+
+The Safety Envelope is enforced **outside AI logic**  
+and **above real-time control execution**.
+
+```mermaid
+flowchart TB
+    Plant["Physical Plant"]
+    Sensors["Sensors"]
+    Actuators["Actuators"]
+
+    PID["PID Controller | real time | deterministic"]
+    FSM["FSM Supervisor | envelope authority"]
+    AI["AI LLM | advisory only"]
+
+    Sensors --> PID
+    PID --> Actuators
+    Actuators --> Plant
+    Plant --> Sensors
+
+    AI -. advisory .-> FSM
+    FSM --> PID
+```
+
+**Key points:**
+
+- AI has **no direct control authority**
+- FSM enforces envelope boundaries
+- PID remains deterministic and bounded
+- Envelope enforcement does **not** depend on AI correctness
+
+---
+
 ## What Is a Safety Envelope
 
 A **Safety Envelope** is the explicitly defined set of conditions
@@ -78,7 +111,9 @@ Everything outside the envelope is **explicitly disallowed**.
 
 ## Example: Safety Envelope for AI-Assisted Thermal Control
 
-*(example section unchanged – 内容は問題なし)*
+*(Example details intentionally omitted here.  
+Examples are used only to validate envelope logic,
+not to justify AI usage.)*
 
 ---
 
@@ -95,11 +130,13 @@ The envelope is **hard, explicit, and conservative**.
 
 ## Deliverables
 
+You will receive:
+
 - Safety Envelope specification
 - Boundary and enforcement definitions
-- Supervisory (FSM) structure
-- Violation and pre-violation actions
-- Design summary (PDF / Markdown)
+- Supervisory structure and FSM logic
+- Pre-violation and violation actions
+- A **design summary document** (PDF or Markdown)
 
 ---
 
@@ -108,13 +145,13 @@ The envelope is **hard, explicit, and conservative**.
 - Introducing AI into safety-critical systems
 - Preventing AI-driven overreach
 - Explaining why AI authority is limited
-- Preparing for audits or safety reviews
+- Preparing for audits or internal safety reviews
 
 ---
 
 ## Engagement Details
 
-- Format: Design discussion + review
+- Format: Design discussion + system review
 - Duration: 2–3 hours
 - Fee guideline: **JPY 100,000 – 300,000**
 
@@ -125,7 +162,7 @@ The envelope is **hard, explicit, and conservative**.
 Safety Envelopes are intentionally **restrictive**.
 
 If AI cannot operate within the envelope,
-the correct design choice is to **limit or disable AI**.
+the correct design choice is to **limit or disable AI involvement**.
 
 ---
 
