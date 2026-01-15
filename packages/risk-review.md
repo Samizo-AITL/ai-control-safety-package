@@ -36,6 +36,42 @@ It does **not** evaluate tuning quality, model accuracy, or performance optimiza
 
 ---
 
+## Architectural Intent (Mermaid Overview)
+
+The fundamental question of this review is **where AI is placed**  
+and **whether it holds authority**.
+
+```mermaid
+flowchart TB
+    Plant[Physical Plant]
+    Sensors[Sensors]
+    Actuators[Actuators]
+
+    PID[PID Controller\n(real-time, deterministic)]
+    FSM[FSM / Supervisory Logic\n(authority owner)]
+    AI[AI / LLM\n(non-real-time)]
+
+    Sensors --> PID
+    PID --> Actuators
+    Actuators --> Plant
+    Plant --> Sensors
+
+    AI -. advisory .-> FSM
+    FSM --> PID
+```
+
+**Design intent:**
+
+- AI is **never** in the real-time control loop  
+- AI outputs are **advisory only**  
+- FSM (or equivalent logic) owns **final authority**  
+- System remains safe with AI **fully disabled**
+
+If this structure cannot be satisfied,  
+the correct outcome of this review is **No-Go**.
+
+---
+
 ## Scope of Review
 
 ### 1. AI / LLM Placement
@@ -62,7 +98,9 @@ It does **not** evaluate tuning quality, model accuracy, or performance optimiza
 
 ## Example: AI-Assisted Control (Illustrative)
 
-*(example section is fine as-is, unchanged)*
+*(Example section intentionally omitted here —  
+examples are evaluated only to validate architecture,
+not to justify AI usage.)*
 
 ---
 
@@ -79,10 +117,12 @@ This is a **design judgment**, not an implementation service.
 
 ## Deliverables
 
+You will receive:
+
 - **Go / Conditional Go / No-Go judgment**
 - Structural risk identification
-- Recommended next steps
-- **1–2 page written summary** (PDF or Markdown)
+- Recommended next steps (if applicable)
+- A **1–2 page written summary** (PDF or Markdown)
 
 ---
 
