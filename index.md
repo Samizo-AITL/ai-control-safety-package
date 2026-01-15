@@ -1,20 +1,16 @@
 ---
-title: "ai-control-safety-package"
-description: "AI Control Safety Package"
+title: "AI Control Safety Package"
+description: "Design and governance framework for safe AI-assisted control systems"
 ---
 
 # AI Control Safety Package  
 
-🚧 **Currently under development.**  
-This package is **not yet offered as a deployable or commercial solution**.
-It is being prepared as a design and governance framework, and real-world
-engagements have not yet been conducted.
+> **A design framework for deciding where AI must NOT be used.**
 
-This site provides a **practical design package** for introducing  
-AI / LLM-based control systems **safely and responsibly**.
-
-We focus on **risk, safety boundaries, and recovery**,  
-**not** performance optimization. 
+🚧 **Currently under development (design framework stage).**  
+This package is **not a deployable product** and **not a certification scheme**.  
+It is a **design- and governance-level framework** for making *defensible decisions*
+about AI / LLM usage in control systems.
 
 ---
 
@@ -26,26 +22,36 @@ We focus on **risk, safety boundaries, and recovery**,
 
 ---
 
-## What this package is
+## What problem this package addresses
 
-- A **design and review framework** for AI-assisted control systems
-- A clear definition of **where AI can be used**
-- A clear definition of **where AI must be stopped**
-- A structured way to ensure systems **recover safely when things go wrong**
+AI and LLMs are increasingly pushed into control systems.  
+In many projects, the real question is not “How can we use AI?” but:
 
-This package targets **industrial control, embedded systems,  
-and long-term operation environments**.
+> **Where must AI be limited, isolated, or stopped?**
+
+This package exists to answer that question **clearly, structurally, and defensibly**.
 
 ---
 
-## What this package is NOT
+## Core philosophy
 
-- We do **NOT** optimize control performance
-- We do **NOT** replace existing PID or classical controllers
-- We do **NOT** place LLMs inside real-time control loops
-- We do **NOT** provide safety certification
+- AI is **not trusted by default**
+- Safety comes from **architecture, not intelligence**
+- Real-time control must remain **deterministic**
+- Failure handling must be **designed, not improvised**
 
-This is a **design-level safety and reliability package**.
+We focus on **risk judgment, safety boundaries, and recovery**  
+—not performance optimization.
+
+---
+
+## Package Structure (How they work together)
+
+The three packages form a **single safety story**:
+
+1. **Risk Review** → Should AI be allowed at all?  
+2. **Safety Envelope** → If allowed, where must AI be strictly constrained?  
+3. **Recovery Control** → When things go wrong, how do we return safely?
 
 ---
 
@@ -56,24 +62,24 @@ Architectural **Go / Conditional Go / No-Go** judgment
 for AI / LLM-based control concepts.
 
 - AI placement outside real-time loops
-- Stop conditions and fallback paths
-- Responsibility and failure handling clarity
+- Explicit stop conditions and fallback paths
+- Clear responsibility and failure ownership
 
 🔗 **Open:**  
-[risk-review.md](https://samizo-aitl.github.io/ai-control-safety-package/packages/risk-review.html)
+[AI Control Risk Review](https://samizo-aitl.github.io/ai-control-safety-package/packages/risk-review.html)
 
 ---
 
 ### 2. Safety Envelope Design
 Explicit definition and enforcement of  
-**operational boundaries AI must not violate**.
+**operational boundaries AI must never violate**.
 
-- Allowed operational regions (envelopes)
+- Allowed operational envelopes
 - Pre-violation detection
 - FSM-based supervisory enforcement
 
 🔗 **Open:**  
-[safety-envelope.md](https://samizo-aitl.github.io/ai-control-safety-package/packages/safety-envelope.html)
+[Safety Envelope Design](https://samizo-aitl.github.io/ai-control-safety-package/packages/safety-envelope.html)
 
 ---
 
@@ -81,12 +87,12 @@ Explicit definition and enforcement of
 Deterministic recovery design after  
 disturbances, degradation, or abnormal behavior.
 
-- Recovery modes
-- Safe fallback paths
-- Controlled re-entry and re-identification
+- Recovery triggers and modes
+- Safe fallback structures
+- Controlled re-entry with accountability
 
 🔗 **Open:**  
-[recovery-control.md](https://samizo-aitl.github.io/ai-control-safety-package/packages/recovery-control.html)
+[Recovery Control Design](https://samizo-aitl.github.io/ai-control-safety-package/packages/recovery-control.html)
 
 ---
 
@@ -95,50 +101,29 @@ disturbances, degradation, or abnormal behavior.
 This package is provided as a **limited-scope design review and consulting service**  
 focused on **architecture, responsibility, and safety logic**.
 
-The following fees reflect:
-- Design-level assessment only (no implementation or coding)
-- No certification, operational guarantee, or liability assumption
-- Time-bounded, clearly scoped engagement
-- Explicit Go / Conditional Go / No-Go judgment where applicable
-
 ### Service Menu
 
 - **AI Control Risk Review**  
   from **JPY 50,000 – 100,000**  
-  *(Architecture review, responsibility definition, Go / No-Go judgment)*
 
 - **Safety Envelope Design**  
   from **JPY 100,000 – 300,000**  
-  *(Operational boundary definition, supervisory logic, enforcement actions)*
 
 - **Recovery Control Design**  
   from **JPY 150,000 – 400,000**  
-  *(Recovery triggers, fallback structure, deterministic re-entry design)*
 
-Fees depend on system complexity, documentation availability,  
-and required depth of review.
+Fees depend on system complexity and documentation quality.
 
 ---
 
 ## Where to start
 
 If you are unsure where to begin,  
-**AI Control Risk Review** is recommended as the first step.
-
----
-
-## Who should use this
-
-- Control engineers under pressure to introduce AI / LLM
-- Technical leads responsible for safety and reliability
-- Teams requiring a defensible **Go / No-Go** decision
-- Organizations that must explain **why AI is limited or disabled**
+**[AI Control Risk Review](https://samizo-aitl.github.io/ai-control-safety-package/packages/risk-review.html)** is recommended as the first step.
 
 ---
 
 ## Contact
-
-For design reviews or inquiries:
 
 📧 [shinichi.samizo2@gmail.com](mailto:shinichi.samizo2@gmail.com)  
 🌐 [samizo-aitl.github.io](https://samizo-aitl.github.io/)
@@ -147,24 +132,13 @@ For design reviews or inquiries:
 
 ## License
 
-This repository is provided for **reference and design discussion purposes only**.
-
-- Reading, discussion, and internal evaluation are permitted.
-- Commercial use, redistribution, or implementation in products or services
-  requires prior written agreement.
-
+Provided for **design reference and discussion only**.  
+Commercial use or product implementation requires prior written agreement.  
 This is **not** an open-source software license.
 
 ---
 
 ## Discussions
 
-For questions, design clarification, or architectural discussion,  
-please use GitHub Discussions:
-
+For questions and architectural discussion:  
 💬 **[GitHub Discussions](https://github.com/Samizo-AITL/ai-control-safety-package/discussions)**
-
-This is the primary place for:
-- Design-level questions
-- Go / No-Go judgment discussion
-- Safety boundary interpretation
