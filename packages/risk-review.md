@@ -43,13 +43,13 @@ and **whether it holds authority**.
 
 ```mermaid
 flowchart TB
-    Plant[Physical Plant]
-    Sensors[Sensors]
-    Actuators[Actuators]
+    Plant["Physical Plant"]
+    Sensors["Sensors"]
+    Actuators["Actuators"]
 
-    PID[PID Controller\n(real-time, deterministic)]
-    FSM[FSM / Supervisory Logic\n(authority owner)]
-    AI[AI / LLM\n(non-real-time)]
+    PID["PID Controller | real-time | deterministic"]
+    FSM["FSM Supervisory Logic | authority owner"]
+    AI["AI LLM | non real-time | advisory"]
 
     Sensors --> PID
     PID --> Actuators
