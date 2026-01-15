@@ -7,10 +7,14 @@ description: "Design and governance framework for safe AI-assisted control syste
 
 > **A design framework for deciding where AI must NOT be used.**
 
-🚧 **Currently under development (design framework stage).**  
+🚧 **Design framework stage (concept and structure finalized).**  
 This package is **not a deployable product** and **not a certification scheme**.  
 It is a **design- and governance-level framework** for making *defensible decisions*
-about AI / LLM usage in control systems.
+about AI / LLM usage in control systems.  
+Practical engagements and case applications are forthcoming.
+
+This package is intended for **control engineers, technical leads, and decision-makers**
+responsible for **system safety and accountability**.
 
 ---
 
@@ -25,11 +29,16 @@ about AI / LLM usage in control systems.
 ## What problem this package addresses
 
 AI and LLMs are increasingly pushed into control systems.  
-In many projects, the real question is not “How can we use AI?” but:
+In many projects, the real question is not:
+
+> *How can we use AI?*
+
+but rather:
 
 > **Where must AI be limited, isolated, or stopped?**
 
-This package exists to answer that question **clearly, structurally, and defensibly**.
+This package exists to answer that question  
+**clearly, structurally, and defensibly**.
 
 ---
 
@@ -47,11 +56,17 @@ We focus on **risk judgment, safety boundaries, and recovery**
 
 ## Package Structure (How they work together)
 
-The three packages form a **single safety story**:
+The packages are intended to be applied **in the following order**  
+and form a **single safety story**:
 
-1. **Risk Review** → Should AI be allowed at all?  
-2. **Safety Envelope** → If allowed, where must AI be strictly constrained?  
-3. **Recovery Control** → When things go wrong, how do we return safely?
+1. **Risk Review**  
+   → *Should AI be allowed at all?*
+
+2. **Safety Envelope**  
+   → *If allowed, where must AI be strictly constrained?*
+
+3. **Recovery Control**  
+   → *When things go wrong, how do we return safely and who decides?*
 
 ---
 
@@ -104,22 +119,26 @@ focused on **architecture, responsibility, and safety logic**.
 ### Service Menu
 
 - **AI Control Risk Review**  
-  from **JPY 50,000 – 100,000**  
+  JPY **50,000 – 100,000**
 
 - **Safety Envelope Design**  
-  from **JPY 100,000 – 300,000**  
+  JPY **100,000 – 300,000**
 
 - **Recovery Control Design**  
-  from **JPY 150,000 – 400,000**  
+  JPY **150,000 – 400,000**
 
-Fees depend on system complexity and documentation quality.
+Fees depend on system complexity, documentation quality,  
+and the required depth of review.
 
 ---
 
 ## Where to start
 
 If you are unsure where to begin,  
-**[AI Control Risk Review](https://samizo-aitl.github.io/ai-control-safety-package/packages/risk-review.html)** is recommended as the first step.
+**AI Control Risk Review** is recommended as the first step.
+
+🔗  
+[Start with AI Control Risk Review](https://samizo-aitl.github.io/ai-control-safety-package/packages/risk-review.html)
 
 ---
 
@@ -132,13 +151,23 @@ If you are unsure where to begin,
 
 ## License
 
-Provided for **design reference and discussion only**.  
-Commercial use or product implementation requires prior written agreement.  
+This repository is provided for **design reference and discussion purposes only**.
+
+- Reading, discussion, and internal evaluation are permitted.
+- Commercial use, redistribution, or implementation in products or services
+  requires prior written agreement.
+
 This is **not** an open-source software license.
 
 ---
 
 ## Discussions
 
-For questions and architectural discussion:  
+For design questions, clarification, or architectural discussion:
+
 💬 **[GitHub Discussions](https://github.com/Samizo-AITL/ai-control-safety-package/discussions)**
+
+This is the primary place for:
+- Design-level questions
+- Go / Conditional Go / No-Go judgment discussion
+- Safety boundary interpretation
