@@ -1,8 +1,3 @@
----
-title: "AI Control Safety Package"
-description: "Design and governance framework for safe AI-assisted control systems"
----
-
 # AI Control Safety Package  
 
 > **A design framework for deciding where AI must NOT be used.**
