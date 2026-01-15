@@ -34,6 +34,28 @@ Recovery is treated as a **designed mode**, not an exception.
 
 ---
 
+## Conceptual Recovery Flow (Mermaid Overview)
+
+Recovery is handled by **explicit supervisory logic**,  
+independent of AI judgment.
+
+```mermaid
+stateDiagram-v2
+    Normal --> Recovery : Trigger detected
+    Recovery --> Stabilizing : Baseline active
+    Stabilizing --> Hold : Stability confirmed
+    Hold --> Normal : Re entry approved
+```
+
+**Design intent:**
+
+- Any trigger forces exit from Normal operation
+- AI has **no authority** during Recovery
+- Return to Normal is **never automatic**
+- Approval is required for re-entry
+
+---
+
 ## What Is Recovery Control
 
 Recovery Control is the explicit design of:
@@ -88,7 +110,9 @@ Re-entry is **explicit**, never automatic.
 
 ## Example: Recovery Control for AI-Assisted Process Control
 
-*(example section unchanged – 内容は問題なし)*
+*(Example details intentionally omitted here.  
+Examples are used only to validate recovery logic,
+not to justify AI usage.)*
 
 ---
 
@@ -105,11 +129,13 @@ Recovery favors **clarity over continuity**.
 
 ## Deliverables
 
+You will receive:
+
 - Recovery trigger definitions
 - Recovery mode structure and FSM transitions
 - Fallback and baseline control definition
 - Controlled re-entry criteria
-- Recovery Control design summary (PDF / Markdown)
+- A **Recovery Control design summary** (PDF or Markdown)
 
 ---
 
