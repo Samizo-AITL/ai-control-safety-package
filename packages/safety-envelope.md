@@ -40,22 +40,11 @@ The Safety Envelope is enforced **outside AI logic**
 and **above real-time control execution**.
 
 ```mermaid
-flowchart TB
-    Plant["Physical Plant"]
-    Sensors["Sensors"]
-    Actuators["Actuators"]
-
-    PID["PID Controller | real time | deterministic"]
-    FSM["FSM Supervisor | envelope authority"]
-    AI["AI LLM | advisory only"]
-
-    Sensors --> PID
-    PID --> Actuators
-    Actuators --> Plant
-    Plant --> Sensors
-
-    AI -. advisory .-> FSM
-    FSM --> PID
+stateDiagram-v2
+    Normal --> Degraded : Boundary approaching
+    Degraded --> Normal : Margin restored
+    Degraded --> Emergency : Boundary violated
+    Emergency --> SafeStop
 ```
 
 **Key points:**
