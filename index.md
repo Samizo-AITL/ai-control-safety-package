@@ -8,9 +8,13 @@ description: "Design and governance framework for safe AI-assisted control syste
 > **A design framework for deciding where AI must NOT be used.**
 
 🚧 **Design framework stage (concept and structure finalized).**  
-This package is **not a deployable product** and **not a certification scheme**.  
+This package is **not a deployable control product**  
+and **not a certification or compliance scheme**.
+
 It is a **design- and governance-level framework** for making *defensible decisions*
-about AI / LLM usage in control systems.  
+about AI / LLM usage in control systems.
+
+Deliverables are **architectural judgments, safety boundaries, and recovery logic designs**.  
 Practical engagements and case applications are forthcoming.
 
 This package is intended for **control engineers, technical leads, and decision-makers**
@@ -76,7 +80,8 @@ and form a **single safety story**:
 Architectural **Go / Conditional Go / No-Go** judgment  
 for AI / LLM-based control concepts.
 
-- AI placement outside real-time loops
+- AI placement strictly outside real-time control loops
+- AI / LLM limited to **planning, diagnosis, or parameter proposal**
 - Explicit stop conditions and fallback paths
 - Clear responsibility and failure ownership
 
@@ -88,6 +93,9 @@ for AI / LLM-based control concepts.
 ### 2. Safety Envelope Design
 Explicit definition and enforcement of  
 **operational boundaries AI must never violate**.
+
+Safety Envelope defines **what must never be violated**  
+and enforces constraints **before unsafe behavior occurs**.
 
 - Allowed operational envelopes
 - Pre-violation detection
@@ -101,6 +109,9 @@ Explicit definition and enforcement of
 ### 3. Recovery Control Design
 Deterministic recovery design after  
 disturbances, degradation, or abnormal behavior.
+
+Recovery Control defines **what happens after a violation or abnormal condition**  
+and governs **safe fallback, stop, and controlled re-entry**.
 
 - Recovery triggers and modes
 - Safe fallback structures
@@ -148,33 +159,33 @@ If you are unsure where to begin,
 |--------|---------|
 | **Name** | Shinichi Samizo |
 | **Expertise** | Semiconductor devices (logic, memory, high-voltage mixed-signal)<br>Thin-film piezo actuators for inkjet systems<br>PrecisionCore printhead productization, BOM management, ISO training |
-| **mail** | [📧 shinichi.samizo2@gmail.com](mailto:shinichi.samizo2@gmail.com)  
+| **mail** | [📧 shinichi.samizo2@gmail.com](mailto:shinichi.samizo2@gmail.com) |
 | **GitHub** | [![GitHub](https://img.shields.io/badge/GitHub-Samizo--AITL-blue?style=for-the-badge&logo=github)](https://github.com/Samizo-AITL) |
 
 ---
 
-# 📄 License
+# 📄 License (Code vs Content)
 
-[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](https://samizo-aitl.github.io/ai-control-safety-package/#---license)
+This repository uses a **hybrid (dual) license structure**,  
+with different terms applying to **source code** and **design / documentation content**.
 
-This repository is provided for **design reference and discussion purposes only**.
+- Reading, discussion, and internal technical evaluation are permitted.
+- **Commercial use or implementation of the design framework as a service or product**
+  requires prior written agreement with the author.
 
-- Reading, discussion, and internal evaluation are permitted.
-- Commercial use, redistribution, or implementation in products or services
-  requires prior written agreement.
+This repository is **not provided as a unified open-source safety standard
+or certification scheme**.
 
-This is **not** an open-source software license.
-
-| 📌 Item | License | Description |
-|--------|---------|-------------|
-| **Source Code** | [**MIT License**](https://opensource.org/licenses/MIT) | Free to use, modify, and redistribute |
-| **Text Materials** | [**CC BY 4.0**](https://creativecommons.org/licenses/by/4.0/) or [**CC BY-SA 4.0**](https://creativecommons.org/licenses/by-sa/4.0/) | Attribution required; share-alike applies for BY-SA |
-| **Figures & Diagrams** | [**CC BY-NC 4.0**](https://creativecommons.org/licenses/by-nc/4.0/) | Non-commercial use only |
-| **External References** | Follow the original license | Cite the original source properly |
+| 📌 Item | License | Scope |
+|--------|---------|-------|
+| **Source Code (utilities, examples)** | [**MIT License**](https://opensource.org/licenses/MIT) | Code-level reuse permitted |
+| **Design Text & Framework Description** | [**CC BY 4.0**](https://creativecommons.org/licenses/by/4.0/) or [**CC BY-SA 4.0**](https://creativecommons.org/licenses/by-sa/4.0/) | Attribution required; framework reuse requires agreement |
+| **Figures, Diagrams, Architecture Drawings** | [**CC BY-NC 4.0**](https://creativecommons.org/licenses/by-nc/4.0/) | Non-commercial use only |
+| **Service Model / Review Criteria** | Proprietary | Consulting use only |
 
 ---
 
-# 💬 Feedback
+## 💬 Feedback
 
 For design questions, clarification, or architectural discussion:
 
