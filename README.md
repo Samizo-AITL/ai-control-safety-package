@@ -76,7 +76,7 @@ for AI / LLM-based control concepts.
 - Clear responsibility and failure ownership
 
 🔗 **Open:**  
-[AI Control Risk Review](https://samizo-aitl.github.io/ai-control-safety-package/packages/risk-review.html)
+[**AI Control Risk Review**](https://samizo-aitl.github.io/ai-control-safety-package/packages/risk-review.html)
 
 ---
 
@@ -89,7 +89,7 @@ Explicit definition and enforcement of
 - FSM-based supervisory enforcement
 
 🔗 **Open:**  
-[Safety Envelope Design](https://samizo-aitl.github.io/ai-control-safety-package/packages/safety-envelope.html)
+[**Safety Envelope Design**](https://samizo-aitl.github.io/ai-control-safety-package/packages/safety-envelope.html)
 
 ---
 
@@ -102,7 +102,7 @@ disturbances, degradation, or abnormal behavior.
 - Controlled re-entry with accountability
 
 🔗 **Open:**  
-[Recovery Control Design](https://samizo-aitl.github.io/ai-control-safety-package/packages/recovery-control.html)
+[**Recovery Control Design**](https://samizo-aitl.github.io/ai-control-safety-package/packages/recovery-control.html)
 
 ---
 
@@ -133,14 +133,14 @@ If you are unsure where to begin,
 **AI Control Risk Review** is recommended as the first step.
 
 🔗  
-[Start with AI Control Risk Review](https://samizo-aitl.github.io/ai-control-safety-package/packages/risk-review.html)
+[**Start with AI Control Risk Review**](https://samizo-aitl.github.io/ai-control-safety-package/packages/risk-review.html)
 
 ---
 
 ## Contact
 
-📧 [shinichi.samizo2@gmail.com](mailto:shinichi.samizo2@gmail.com)  
-🌐 [samizo-aitl.github.io](https://samizo-aitl.github.io/)
+📧 [**shinichi.samizo2@gmail.com**](mailto:shinichi.samizo2@gmail.com)  
+🌐 [**samizo-aitl.github.io**](https://samizo-aitl.github.io/)
 
 ---
 
