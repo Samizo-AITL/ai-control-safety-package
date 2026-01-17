@@ -142,14 +142,20 @@ If you are unsure where to begin,
 
 ---
 
-## Contact
+## 👤 Author
 
-📧 [**shinichi.samizo2@gmail.com**](mailto:shinichi.samizo2@gmail.com)  
-🌐 [**samizo-aitl.github.io**](https://samizo-aitl.github.io/)
+| 📌 Item | Details |
+|--------|---------|
+| **Name** | Shinichi Samizo |
+| **Expertise** | Semiconductor devices (logic, memory, high-voltage mixed-signal)<br>Thin-film piezo actuators for inkjet systems<br>PrecisionCore printhead productization, BOM management, ISO training |
+| **mail** | [📧 shinichi.samizo2@gmail.com](mailto:shinichi.samizo2@gmail.com)  
+| **GitHub** | [![GitHub](https://img.shields.io/badge/GitHub-Samizo--AITL-blue?style=for-the-badge&logo=github)](https://github.com/Samizo-AITL) |
 
 ---
 
-## License
+# 📄 License
+
+[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](https://samizo-aitl.github.io/ai-control-safety-package/#---license)
 
 This repository is provided for **design reference and discussion purposes only**.
 
@@ -159,13 +165,20 @@ This repository is provided for **design reference and discussion purposes only*
 
 This is **not** an open-source software license.
 
+| 📌 Item | License | Description |
+|--------|---------|-------------|
+| **Source Code** | [**MIT License**](https://opensource.org/licenses/MIT) | Free to use, modify, and redistribute |
+| **Text Materials** | [**CC BY 4.0**](https://creativecommons.org/licenses/by/4.0/) or [**CC BY-SA 4.0**](https://creativecommons.org/licenses/by-sa/4.0/) | Attribution required; share-alike applies for BY-SA |
+| **Figures & Diagrams** | [**CC BY-NC 4.0**](https://creativecommons.org/licenses/by-nc/4.0/) | Non-commercial use only |
+| **External References** | Follow the original license | Cite the original source properly |
+
 ---
 
-## Discussions
+# 💬 Feedback
 
 For design questions, clarification, or architectural discussion:
 
-💬 **[GitHub Discussions](https://github.com/Samizo-AITL/ai-control-safety-package/discussions)**
+[![💬 GitHub Discussions](https://img.shields.io/badge/💬%20GitHub-Discussions-brightgreen?logo=github)](https://github.com/Samizo-AITL/vi-control-asic-sky130//discussions)
 
 This is the primary place for:
 - Design-level questions
