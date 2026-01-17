@@ -155,7 +155,7 @@ If you are unsure where to begin,
 
 # 📄 License
 
-[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](https://samizo-aitl.github.io/ai-control-safety-package/#---license)]
+[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](https://samizo-aitl.github.io/ai-control-safety-package/#---license)
 
 This repository is provided for **design reference and discussion purposes only**.
 
@@ -178,7 +178,7 @@ This is **not** an open-source software license.
 
 For design questions, clarification, or architectural discussion:
 
-[![💬 GitHub Discussions](https://img.shields.io/badge/💬%20GitHub-Discussions-brightgreen?logo=github)](https://github.com/Samizo-AITL/ai-control-safety-package/discussions)]
+[![💬 GitHub Discussions](https://img.shields.io/badge/💬%20GitHub-Discussions-brightgreen?logo=github)](https://github.com/Samizo-AITL/ai-control-safety-package/discussions)
 
 This is the primary place for:
 - Design-level questions
