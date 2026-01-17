@@ -173,7 +173,7 @@ This is **not** an open-source software license.
 
 For design questions, clarification, or architectural discussion:
 
-[![💬 GitHub Discussions](https://img.shields.io/badge/💬%20GitHub-Discussions-brightgreen?logo=github)](https://github.com/Samizo-AITL/vi-control-asic-sky130//discussions)
+[![💬 GitHub Discussions](https://img.shields.io/badge/💬%20GitHub-Discussions-brightgreen?logo=github)](https://github.com/Samizo-AITL/ai-control-safety-package/discussions)
 
 This is the primary place for:
 - Design-level questions
