@@ -5,164 +5,201 @@ description: "Deterministic recovery and controlled re-entry for AI-assisted con
 
 ← **[Back to AI Control Safety Package](https://samizo-aitl.github.io/ai-control-safety-package/)**
 
-# Recovery Control Design
+# 🔁 Recovery Control Design
 
-## Role in This Package
+## 🎯 Role in This Package
 
 **Recovery Control Design** is the **final step** of the  
 **AI Control Safety Package**.
 
-Its purpose is to answer:
+Its role is to answer one critical question:
 
-> **When things go wrong, how do we return safely — and who decides?**
+> ❓ **When things go wrong, how do we return safely — and who decides?**
 
-This design ensures that abnormal behavior does **not**
-lead to cascading failure, silent AI dependence, or undefined responsibility.
+This design step ensures that abnormal behavior does **not** lead to:
 
----
+- ❌ Cascading failure
+- ❌ Silent dependence on AI
+- ❌ Undefined or ambiguous responsibility
 
-## Overview
-
-**Recovery Control Design** defines how a control system **returns to a safe,
-stable, and explainable state** after abnormal behavior, disturbances,
-degradation, or unexpected operating conditions.
-
-The objective is **not automatic optimization**, but **controlled recovery**
-with clear responsibility and deterministic behavior.
-
-Recovery is treated as a **designed mode**, not an exception.
+Recovery is treated as a **designed, governed process**,  
+not as an emergency improvisation.
 
 ---
 
-## Conceptual Recovery Flow (Mermaid Overview)
+## 🧠 Overview
 
-Recovery is handled by **explicit supervisory logic**,  
-independent of AI judgment.
+**Recovery Control Design** defines how a control system returns to a:
+
+- 🧯 Safe
+- 🧱 Stable
+- 🧭 Explainable
+
+state after abnormal behavior, disturbances, degradation,  
+or unexpected operating conditions.
+
+The objective is **not automatic optimization**.
+
+The objective is:
+
+> **Controlled, deterministic recovery with clear responsibility**
+
+Recovery is treated as a **first-class operational mode**,  
+not as an exception.
+
+---
+
+## 🏗️ Conceptual Recovery Flow  
+### *Recovery is explicit and supervised*
+
+Recovery behavior is governed by **explicit supervisory logic**,  
+fully independent of AI judgment.
 
 ```mermaid
 stateDiagram-v2
     Normal --> Recovery : Trigger detected
     Recovery --> Stabilizing : Baseline active
     Stabilizing --> Hold : Stability confirmed
-    Hold --> Normal : Re entry approved
+    Hold --> Normal : Re-entry approved
 ```
 
-**Design intent:**
+### Design intent
 
-- Any trigger forces exit from Normal operation
-- AI has **no authority** during Recovery
-- Return to Normal is **never automatic**
-- Approval is required for re-entry
-
----
-
-## What Is Recovery Control
-
-Recovery Control is the explicit design of:
-
-- **When** the system is considered degraded or abnormal
-- **How** normal operation is suspended or limited
-- **Which path** the system follows to return to a safe baseline
-- **Who decides** when recovery is complete
-
-Recovery always prioritizes **safety and predictability** over continuity.
+- ⚠️ Any trigger forces exit from Normal operation
+- 🚫 AI has **no authority** during Recovery
+- 🔒 Return to Normal is **never automatic**
+- 🧭 Explicit approval is required for re-entry
 
 ---
 
-## Design Scope
+## 🧩 What Is Recovery Control
 
-### 1. Recovery Triggers
+**Recovery Control** is the explicit design of:
+
+- ⏱️ **When** the system is considered degraded or abnormal
+- 🧯 **How** normal operation is suspended or limited
+- 🛣️ **Which path** the system follows to reach a safe baseline
+- 👤 **Who decides** when recovery is complete
+
+Recovery always prioritizes:
+
+> **Safety · Predictability · Accountability**
+
+over continuity or performance.
+
+---
+
+## 🔍 Design Scope
+
+### 1️⃣ Recovery Triggers
+Explicit conditions that force entry into Recovery Mode:
+
 - Detection of abnormal behavior or envelope violation
 - Performance degradation beyond allowed limits
 - Loss of confidence in AI-assisted decisions
 - External or manual recovery requests
 
-Triggers are **explicit and conservative**.
+Triggers are **explicit, conservative, and reviewable**.
 
 ---
 
-### 2. Recovery Modes
-- Dedicated **Recovery Mode** distinct from normal operation
+### 2️⃣ Recovery Modes
+- Dedicated **Recovery Mode** clearly separated from Normal operation
 - Reduced authority and simplified control structure
-- Clear separation from AI-assisted or adaptive modes
+- Complete separation from AI-assisted or adaptive modes
 
-Recovery modes are **finite, deterministic, and explainable**.
+Recovery modes are:
+
+> **Finite · Deterministic · Explainable**
 
 ---
 
-### 3. Fallback and Baseline Control
+### 3️⃣ Fallback & Baseline Control
 - Transition to fixed, well-understood baseline controllers
-- Guaranteed operability without AI involvement
+- Guaranteed operability **without AI involvement**
 - Known-safe behavior with bounded performance
 
-Baseline control is a **design guarantee**, not a failure state.
+Baseline control is a **design guarantee**,  
+not a failure or degraded feature.
 
 ---
 
-### 4. Controlled Re-Entry
-- Criteria for exiting Recovery Mode
-- Optional and bounded re-enablement of AI functions
+### 4️⃣ Controlled Re-Entry
+- Explicit criteria for exiting Recovery Mode
+- Optional, bounded re-enablement of AI functions
 - Human approval or supervisory confirmation when required
 
-Re-entry is **explicit**, never automatic.
+Re-entry is:
+
+> 🔒 **Explicit**  
+> 🚫 **Never automatic**
 
 ---
 
-## Example: Recovery Control for AI-Assisted Process Control
+## 🧪 Example: Recovery Control for AI-Assisted Process Control
 
-*(Example details intentionally omitted here.  
-Examples are used only to validate recovery logic,
-not to justify AI usage.)*
+*(Example details are intentionally omitted.)*
 
----
-
-## What This Design Does NOT Do
-
-- No unrestricted self-healing
-- No AI-driven recovery completion
-- No silent failure masking
-- No guarantee of uninterrupted performance
-
-Recovery favors **clarity over continuity**.
+Examples are used **only** to validate recovery logic  
+—not to justify AI usage.
 
 ---
 
-## Deliverables
+## 🚫 What This Design Does NOT Do
+
+This design explicitly avoids:
+
+- Unrestricted self-healing
+- AI-driven recovery completion
+- Silent failure masking
+- Guarantees of uninterrupted performance
+
+Recovery favors:
+
+> **Clarity over continuity**
+
+---
+
+## 📦 Deliverables
 
 You will receive:
 
-- Recovery trigger definitions
-- Recovery mode structure and FSM transitions
-- Fallback and baseline control definition
-- Controlled re-entry criteria
-- A **Recovery Control design summary** (PDF or Markdown)
+- 🔔 Recovery trigger definitions
+- 🔁 Recovery mode structure and FSM transitions
+- 🧱 Fallback and baseline control definition
+- 🧭 Controlled re-entry criteria
+- 📄 A **Recovery Control design summary** (PDF or Markdown)
 
 ---
 
-## Typical Use Cases
+## 🧑‍💼 Typical Use Cases
 
 - Long-term operation with degradation or drift
 - Systems requiring reversible AI involvement
-- Preparation for abnormal events
-- Accountability after unexpected behavior
+- Preparation for abnormal or off-nominal events
+- Accountability after unexpected system behavior
 
 ---
 
-## Engagement Details
+## 💼 Engagement Details
 
-- Format: Design discussion + analysis
-- Duration: 2–3 hours
-- Fee guideline: **JPY 150,000 – 400,000**
+| Item | Details |
+|----|--------|
+| **Format** | Design discussion + analysis |
+| **Duration** | 2–3 hours |
+| **Fee guideline** | **JPY 150,000 – 400,000** |
 
 ---
 
-## Important Note
+## ⚠️ Important Note
 
-A system that cannot **recover deterministically**
-is not suitable for AI-assisted control.
+A system that cannot **recover deterministically**  
+is **not suitable** for AI-assisted control.
 
-If safe recovery cannot be defined,
-AI involvement should be **restricted or removed**.
+If safe recovery cannot be explicitly defined,  
+AI involvement must be:
+
+> 🚫 **Restricted or removed**
 
 ---
 
@@ -174,7 +211,7 @@ AI involvement should be **restricted or removed**.
 
 ---
 
-## Contact
+## 📬 Contact
 
 📧 [shinichi.samizo2@gmail.com](mailto:shinichi.samizo2@gmail.com)  
 🌐 [samizo-aitl.github.io](https://samizo-aitl.github.io/)
