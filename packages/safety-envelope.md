@@ -5,39 +5,53 @@ description: "Explicit operational boundary definition and enforcement for AI-as
 
 ← **[Back to AI Control Safety Package](https://samizo-aitl.github.io/ai-control-safety-package/)**
 
-# Safety Envelope Design
+# 🧱 Safety Envelope Design
 
-## Role in This Package
+## 🎯 Role in This Package
 
 **Safety Envelope Design** is the **second step** of the  
 **AI Control Safety Package**.
 
-Its purpose is to answer:
+Its role is to answer the following question:
 
-> **If AI is allowed, where must it be strictly constrained?**
+> ❓ **If AI is allowed, where must it be strictly constrained?**
 
-This design defines **hard operational boundaries**
+This design step defines **hard operational boundaries**  
 that AI-assisted control **must never violate**.
 
----
-
-## Overview
-
-**Safety Envelope Design** defines and enforces the **operational boundaries**
-within which an AI / LLM-assisted control system is allowed to operate.
-
-The goal is **not** to improve performance, but to ensure that
-AI involvement **never drives the system outside predefined safe regions**.
-
-Safety boundaries are treated as **first-class design elements**,
-not as afterthoughts.
+It translates the **Go / Conditional Go judgment**  
+into **explicit, enforceable limits**.
 
 ---
 
-## Conceptual Structure (Mermaid Overview)
+## 🧠 Overview
 
-The Safety Envelope is enforced **outside AI logic**  
-and **above real-time control execution**.
+**Safety Envelope Design** defines and enforces the  
+**operational boundaries** within which an AI / LLM-assisted
+control system is allowed to operate.
+
+The objective is **not** performance improvement.
+
+The objective is to ensure that:
+
+> ⚠️ **AI involvement can never push the system outside predefined safe regions**
+
+Safety boundaries are treated as:
+
+- 🧱 **First-class design elements**
+- 🧭 Explicit architectural constraints
+- 🧯 Independent of AI correctness or intent
+
+---
+
+## 🏗️ Conceptual Structure  
+### *Where the envelope lives*
+
+Safety Envelope enforcement is:
+
+- 🚫 Outside AI logic  
+- 🧭 Above real-time control execution  
+- ⏱️ Independent of control loop timing  
 
 ```mermaid
 stateDiagram-v2
@@ -47,111 +61,130 @@ stateDiagram-v2
     Emergency --> SafeStop
 ```
 
-**Key points:**
+### Key design principles
 
-- AI has **no direct control authority**
-- FSM enforces envelope boundaries
-- PID remains deterministic and bounded
-- Envelope enforcement does **not** depend on AI correctness
+- 🧠 AI has **no direct control authority**
+- 🧭 FSM enforces envelope boundaries
+- ⏱️ PID remains deterministic and bounded
+- 📴 Envelope enforcement does **not** depend on AI correctness
 
 ---
 
-## What Is a Safety Envelope
+## 🧩 What Is a Safety Envelope
 
-A **Safety Envelope** is the explicitly defined set of conditions
+A **Safety Envelope** is the explicitly defined set of conditions  
 under which the system is allowed to operate.
 
-Typical envelope dimensions include:
+It defines **where control is permitted**.
 
-- Physical limits (position, velocity, force, current, voltage)
-- Timing limits (response delay, settling time, update intervals)
-- Control authority limits (gain ranges, output saturation)
-- Operational modes and transitions
-- Environmental or aging assumptions
-
-The envelope defines **where control is allowed**.  
 Everything outside the envelope is **explicitly disallowed**.
+
+### Typical envelope dimensions
+
+- 📐 Physical limits  
+  (position, velocity, force, current, voltage)
+- ⏱️ Timing limits  
+  (response delay, settling time, update intervals)
+- 🎚️ Control authority limits  
+  (gain ranges, output saturation)
+- 🔄 Operational modes and transitions
+- 🌡️ Environmental or aging assumptions
+
+The envelope is **conservative by design**  
+and reflects **responsibility, not optimism**.
 
 ---
 
-## Design Scope
+## 🔍 Design Scope
 
-### 1. Envelope Definition
+### 1️⃣ Envelope Definition
 - Identification of critical variables and limits
-- Normal, degraded, and emergency regions
-- Conservative boundary setting based on responsibility
+- Separation of:
+  - Normal region
+  - Degraded region
+  - Emergency region
+- Boundary setting based on **assumed failure responsibility**
 
-### 2. Pre-Violation Detection
-- Boundary approach detection
+### 2️⃣ Pre-Violation Detection
+- Boundary-approach detection
 - Margin- and trend-based logic
-- Early intervention before violation
+- Early intervention **before** violation occurs
 
-### 3. Supervisory Enforcement
+### 3️⃣ Supervisory Enforcement
 - FSM-based envelope supervision
 - Deterministic enforcement actions
 - Clear separation from AI advisory logic
 
-### 4. Enforcement Actions
+### 4️⃣ Enforcement Actions
 - Authority clamping
 - Mode downgrade or fallback
-- Complete AI disengagement if required
+- Complete AI disengagement when required
 
 ---
 
-## Example: Safety Envelope for AI-Assisted Thermal Control
+## 🧪 Example: Safety Envelope for AI-Assisted Thermal Control
 
-*(Example details intentionally omitted here.  
-Examples are used only to validate envelope logic,
-not to justify AI usage.)*
+*(Example details are intentionally omitted.)*
 
----
-
-## What This Design Does NOT Do
-
-- No control performance optimization
-- No AI-based safety judgment
-- No assumption of perfect models
-- No replacement of certified safety systems
-
-The envelope is **hard, explicit, and conservative**.
+Examples are used **only** to validate envelope logic  
+—not to justify AI usage.
 
 ---
 
-## Deliverables
+## 🚫 What This Design Does NOT Do
+
+This design explicitly does **not** include:
+
+- Control performance optimization
+- AI-based safety judgment
+- Assumptions of perfect models or predictions
+- Replacement of certified safety systems
+
+The Safety Envelope is:
+
+> **Hard · Explicit · Conservative**
+
+---
+
+## 📦 Deliverables
 
 You will receive:
 
-- Safety Envelope specification
-- Boundary and enforcement definitions
-- Supervisory structure and FSM logic
-- Pre-violation and violation actions
-- A **design summary document** (PDF or Markdown)
+- 🧱 Safety Envelope specification
+- 📐 Boundary definitions and limits
+- 🧭 Supervisory structure and FSM logic
+- ⚠️ Pre-violation and violation actions
+- 📄 A **design summary document** (PDF or Markdown)
 
 ---
 
-## Typical Use Cases
+## 🧑‍💼 Typical Use Cases
 
 - Introducing AI into safety-critical systems
 - Preventing AI-driven overreach
-- Explaining why AI authority is limited
+- Explaining and defending limited AI authority
 - Preparing for audits or internal safety reviews
 
 ---
 
-## Engagement Details
+## 💼 Engagement Details
 
-- Format: Design discussion + system review
-- Duration: 2–3 hours
-- Fee guideline: **JPY 100,000 – 300,000**
+| Item | Details |
+|----|--------|
+| **Format** | Design discussion + system review |
+| **Duration** | 2–3 hours |
+| **Fee guideline** | **JPY 100,000 – 300,000** |
 
 ---
 
-## Important Note
+## ⚠️ Important Note
 
 Safety Envelopes are intentionally **restrictive**.
 
-If AI cannot operate within the envelope,
-the correct design choice is to **limit or disable AI involvement**.
+If AI cannot operate within the envelope,  
+the correct design choice is to:
+
+> 🚫 **Limit or disable AI involvement**
 
 ---
 
@@ -163,7 +196,7 @@ the correct design choice is to **limit or disable AI involvement**.
 
 ---
 
-## Contact
+## 📬 Contact
 
 📧 [shinichi.samizo2@gmail.com](mailto:shinichi.samizo2@gmail.com)  
 🌐 [samizo-aitl.github.io](https://samizo-aitl.github.io/)
