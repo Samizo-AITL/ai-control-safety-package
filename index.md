@@ -215,7 +215,7 @@ and **not** a certification scheme.
 
 Design questions, clarification, and architectural discussion are welcome:
 
-👉 [💬 GitHub Discussions](https://github.com/Samizo-AITL/ai-control-safety-package/discussions)
+👉 [![💬 GitHub Discussions](https://img.shields.io/badge/💬%20GitHub-Discussions-brightgreen?logo=github)](https://github.com/Samizo-AITL/ai-control-safety-package/discussions)
 
 Primary topics:
 - Go / Conditional Go / No-Go judgments
