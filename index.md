@@ -199,11 +199,11 @@ If you are unsure where to begin:
 
 This repository uses a **hybrid (dual) license structure**.
 
-| Scope | License | Notes |
-|----|--------|------|
-| **Source Code** | MIT License | Reuse permitted |
-| **Design Text & Framework** | CC BY 4.0 / CC BY-SA 4.0 | Attribution required |
-| **Figures & Diagrams** | CC BY-NC 4.0 | Non-commercial only |
+| 📌 Item | License | Scope |
+|--------|---------|-------|
+| **Source Code (utilities, examples)** | [**MIT License**](https://opensource.org/licenses/MIT) | Code-level reuse permitted |
+| **Design Text & Framework Description** | [**CC BY 4.0**](https://creativecommons.org/licenses/by/4.0/) or [**CC BY-SA 4.0**](https://creativecommons.org/licenses/by-sa/4.0/) | Attribution required; framework reuse requires agreement |
+| **Figures, Diagrams, Architecture Drawings** | [**CC BY-NC 4.0**](https://creativecommons.org/licenses/by-nc/4.0/) | Non-commercial use only |
 | **Service Model / Review Criteria** | Proprietary | Consulting use only |
 
 ⚠️ This repository is **not** an open safety standard  
