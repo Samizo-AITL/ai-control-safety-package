@@ -190,7 +190,7 @@ If you are unsure where to begin:
 |------|--------|
 | **Name** | Shinichi Samizo |
 | **Expertise** | Semiconductor devices (logic, memory, high-voltage mixed-signal)<br>Thin-film piezo actuators for inkjet systems<br>PrecisionCore printhead productization, BOM management, ISO training |
-| **Mail** | 📧 shinichi.samizo2@gmail.com |
+| **Mail** | 📧 [shinichi.samizo2@gmail.com](mailto:shinichi.samizo2@gmail.com)  |
 | **GitHub** | [![GitHub](https://img.shields.io/badge/GitHub-Samizo--AITL-black?logo=github)](https://github.com/Samizo-AITL) |
 
 ---
