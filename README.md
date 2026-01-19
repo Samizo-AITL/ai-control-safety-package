@@ -91,6 +91,42 @@ and form a **single, coherent safety story**:
 
 ---
 
+## 🧭 End-to-End Safety Story (Conceptual View)
+
+This package defines a **single end-to-end safety narrative**
+for AI-assisted control systems.
+
+It is **not an operational sequence**  
+and **not a runtime behavior specification**.
+
+It describes **how safety responsibility flows by design**.
+
+### End-to-End Design Flow
+
+1. **Before deployment**  
+   → Decide whether AI / LLM is allowed at all  
+   (**AI Control Risk Review**)
+
+2. **During normal operation**  
+   → AI is constrained within explicitly defined boundaries  
+   (**Safety Envelope**)
+
+3. **When boundaries are violated**  
+   → Deterministic fallback is enforced immediately  
+   (FSM-governed Safe Mode)
+
+4. **After failure or degradation**  
+   → Controlled and accountable recovery is executed  
+   (**Recovery Control**)
+
+At no point does AI make final safety decisions.
+
+This framework ensures that  
+**safety, recovery, and responsibility remain human-designed,
+deterministic, and explainable — end to end.**
+
+---
+
 ## 📦 Packages
 
 ### 1️⃣ AI Control Risk Review  
