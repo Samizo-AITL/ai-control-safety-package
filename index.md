@@ -19,6 +19,14 @@ for making **defensible, explainable decisions** about
 
 ---
 
+## 🔗 Links
+
+| Language | GitHub Pages 🌐 | GitHub 💻 |
+|--------|----------------|-----------|
+| 🇺🇸 English | [![GitHub Pages EN](https://img.shields.io/badge/GitHub%20Pages-English-brightgreen?logo=github)](https://samizo-aitl.github.io/ai-control-safety-package/) | [![GitHub Repo EN](https://img.shields.io/badge/GitHub-English-blue?logo=github)](https://github.com/Samizo-AITL/ai-control-safety-package/tree/main) |
+
+---
+
 ## 🎯 What this package delivers
 
 This package does **not** deliver algorithms or code.  
@@ -34,14 +42,6 @@ It is intended for:
 - 🧠 Control engineers
 - 🧭 Technical leaders
 - 🏛️ Decision-makers responsible for **system safety & accountability**
-
----
-
-## 🔗 Links
-
-| Language | GitHub Pages 🌐 | GitHub 💻 |
-|--------|----------------|-----------|
-| 🇺🇸 English | [![GitHub Pages EN](https://img.shields.io/badge/GitHub%20Pages-English-brightgreen?logo=github)](https://samizo-aitl.github.io/ai-control-safety-package/) | [![GitHub Repo EN](https://img.shields.io/badge/GitHub-English-blue?logo=github)](https://github.com/Samizo-AITL/ai-control-safety-package/tree/main) |
 
 ---
 
